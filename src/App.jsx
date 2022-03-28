@@ -1,45 +1,31 @@
 import { useState } from 'react'
-import logo from './logo.svg'
+import Product from './components/Product'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const data = [
+	{
+		name: 'Hammare',
+		price: 125,
+		img: 'https://www.lindqvist-msk.se/produkter/mindre/74266---2.jpg?id=0328114'
+	},
+	{
+		name: 'Spik',
+		price: 35,
+		img: 'https://5.imimg.com/data5/ES/YM/MY-27125663/round-ms-wire-nail-500x500.jpg'
+	}
+]
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+function App() {
+
+	return (
+		<div className="app">
+			<div className="product-container">
+				<Product data={data[0]} />
+				<Product data={data[1]} />
+			</div>
+		</div>
+	)
 }
+
 
 export default App
