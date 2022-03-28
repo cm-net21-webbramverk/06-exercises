@@ -32,14 +32,30 @@ const cityData = [
 		id: 3,
 		name: 'Kapstaden',
 		population: 4600000
+	},
+	{
+		id: 2,
+		name: 'Gränna',
+		population: 2665
+	},
+	{
+		id: 100,
+		name: 'Shanghai',
+		population: 26320000
+	},
+	{
+		id: 101,
+		name: 'Oslo',
+		population: 634293
 	}
 ]
 
 function App() {
+	const [cities, setCities] = useState(cityData)
 
 	return (
 		<div className="app">
-			<CityList cities={cityData} />
+			<CityList cities={cities} setCities={setCities} />
 			<Fruits />
 			<div className="product-container">
 			{data.map(item => (

@@ -16,3 +16,19 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
+
+.city-list {
+	border: 1px solid gray;
+	margin: 0.3em;
+	padding: 0.6em 1.2em;
+	background-color: #DEEBF8;
+}
+.city-list button {
+	padding: 0.3em 0.8em;
+	border-radius: 0.3em;
+	border: 1px solid gray;
+}
+.city-list button:hover {
+	cursor: pointer;
+	border: 1px solid black;
+}
