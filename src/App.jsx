@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Product from './components/Product'
+import SimpleList from './components/SimpleList'
 import './App.css'
 
 const data = [
@@ -20,12 +21,13 @@ function App() {
 	return (
 		<div className="app">
 			<div className="product-container">
-				<Product data={data[0]} />
-				<Product data={data[1]} />
+			{data.map(item => (
+				<Product key={item.name + item.img} data={item} />
+			))}
 			</div>
+			<SimpleList />
 		</div>
 	)
 }
-
 
 export default App
